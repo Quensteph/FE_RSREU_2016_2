@@ -1,1 +1,3 @@
-# FE_RSREU_2016_2
+# Sergey Shcherbakov
+
+Homework assignments from the front-end courses
