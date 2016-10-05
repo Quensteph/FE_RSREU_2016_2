@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en-US">
+	<head>
+		<title>HTML Fundamentals - Task 1</title>
+		<meta charset="utf-8" />
+        <style>
+            table {
+                width: 100%;
+            }
+            table, td {
+                border: 1px solid black;
+            }
+            thead tr,
+            tfoot tr {
+                background-color: #b5dcb3;
+            }
+            iframe {
+                width: 100%;
+                frameborder: 0;
+            }
+        </style>
+	</head>
+	
+	<body>
+		<table>
+			<thead>
+				<tr>
+                    <td><h1>This is the Main Page title</h1></td>
+				    <td><a href="page_2.html" target="my_frame">Menu 1</a></td>
+				</tr>
+			</thead>
+			
+			<tbody>
+                <tr>
+				    <td colspan="2">
+					   <iframe src="page_1.html" name="my_frame"></iframe>
+				    </td>
+                </tr>
+			</tbody>
+			
+			<tfoot>
+				<tr>
+					<td colspan="2">Copyright &copy; 2016 You</td> 
+				</tr>
+			</tfoot>
+		</table>
+	</body>
+</html>

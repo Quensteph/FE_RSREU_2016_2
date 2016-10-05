@@ -1,0 +1,1 @@
+Remake a web page according to screenshots provided using table page layout.
