@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>HTML Fundamentals - Task 2</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    
+    <body>
+        <table>
+            <thead>
+                <tr>
+                    <td id="logo">
+                        <a href="default.html" target="my_frame">Web Page</a>
+                    </td>
+                    <td>
+                        <a class="top_nav" href="menu_item_1/menu_item_1.html" target="my_frame">Menu Item 1</a>
+                    </td>
+                    <td>
+                        <a class="top_nav" href="menu_item_2/menu_item_2.html" target="my_frame">Menu Item 2</a>
+                    </td>
+                    <td>
+                        <a class="top_nav" href="menu_item_3/menu_item_3.html" target="my_frame">Menu Item 3</a>
+                    </td>
+                </tr>
+            </thead>
+            
+            <tbody>
+                <tr>
+                    <td colspan="4">
+                        <iframe src="default.html" name="my_frame"></iframe>
+                    </td>
+                </tr>
+            </tbody>
+            
+            <tfoot>
+                <tr>
+                    <td colspan="4">Copyright &copy; 2016 Sergey Shcherbakov</td>
+                </tr>
+            </tfoot>
+        </table>
+    </body>
+</html>
