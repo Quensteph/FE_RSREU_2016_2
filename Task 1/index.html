@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>HTML Advanced - Task 1</title>
+        <meta charset="utf-8" />
+        <style>
+            table, th, td {
+                border: 1px solid black;
+            }
+            
+            th {
+                min-width: 60px;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <h1>HTML Advanced - Task 1</h1>
+        <ul>
+            <li><a href="#">Searching</a></li>
+            <li><a href="#">YouTube</a></li>
+            <li><a href="#">Card</a></li>
+            <li><a href="#">Play</a></li>
+            <li><a href="#">News</a></li>
+            <li><a href="#">Mail</a></li>
+        </ul>
+        <ol start="7">
+            <li>Searching</li>
+            <li>Card</li>
+            <li>Market</li>
+            <li>News</li>
+            <li>Dictionaries</li>
+            <li>Pictures</li>
+            <li>Yet</li>
+            <li style="list-style-type:none;">
+                <ul>
+                    <li>Flights</li>
+                    <li>Auto</li>
+                    <li>Poster</li>
+                    <li>Blogs</li>
+                </ul>
+            </li>
+        </ol>
+        <dl>
+            <dt><em>Tag</em></dt>
+            <dd>element of Hypertext Markup Language</dd>
+            <dt><em>The Semantic Web</em></dt>
+            <dd>The direction of the development of the World Wide Web, the aim of which is to provide information in a form suitable for machine processing</dd>
+        </dl>
+        <hr /><!-- End of list -->
+        
+        <table>
+            <caption>CSS generated content for pseudo-elements</caption>
+            <thead>
+                <tr>
+                    <th>IE</th>
+                    <th>Firefox</th>
+                    <th>Chrome</th>
+                    <th>Safari</th>
+                    <th>Opera</th>
+                    <th>iOS Safari</th>
+                    <th>Opera Mini</th>
+                    <th>Android Browser</th>
+                    <th>Chrome for Android</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td rowspan="2"></td>
+                    <td rowspan="4"></td>
+                    <td>27</td>
+                    <td rowspan="3"></td>
+                    <td rowspan="5"></td>
+                    <td rowspan="4" style="width:100px;"></td>
+                    <td rowspan="5" style="width:100px;"></td>
+                    <td style="width:200px;"></td>
+                    <td rowspan="5" style="width:250px;"></td>
+                </tr>
+                <tr>
+                    <td>31</td>
+                    <td>2.3</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>33</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>9</td>
+                    <td>34</td>
+                    <td>5.1</td>
+                    <td>4.1</td>
+                </tr>
+                <tr>
+                    <td>10</td>
+                    <td>thirty</td>
+                    <td>35</td>
+                    <td>6.1</td>
+                    <td>6.1</td>
+                    <td>4.3</td>
+                </tr>
+                <tr>
+                    <td>eleven</td>
+                    <td>31</td>
+                    <td>36</td>
+                    <td>7</td>
+                    <td>23</td>
+                    <td>7.1</td>
+                    <td>7</td>
+                    <td>4.4</td>
+                    <td>36</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="9">Method of displaying text or images before or after the given element's contents using the: before and: after pseudo-elements</td>
+                </tr>
+            </tfoot>
+        </table><!--End of the table -->
+        
+        <form action="https://httpbin.org/post" method="post" name="survey" id="survey">
+            <fieldset form="survey">
+                <legend>Personal data</legend>
+                <p>
+                    <label for="surname">Surname:&nbsp;</label>
+                    <input type="text" name="surname" id="surname" />
+                </p>
+                <p>
+                    <label for="first_name">First Name:&nbsp;</label>
+                    <input type="text" name="first_name" id="first_name" />
+                </p>
+                <p>
+                     <label for="middle_name">Middle Name:&nbsp;</label>
+                    <input type="text" name="middle_name" id="middle_name" />
+                </p>
+                <p>
+                    Genger:&nbsp;
+                    <label for="male">male</label><input type="radio" name="gender" id="male" />
+                    <label for="female">female</label><input type="radio" name="gender" id="female" />
+                </p>
+                <p>
+                    <label for="age">Age:&nbsp;</label>
+                    <input type="number" min="18" max="101" name="age" id="age" />
+                </p>
+                <p>
+                    <label for="country">Country of Residence:&nbsp;</label>
+                    <select name="country" id="country">
+                        <option value="ru">Russian Federation</option>
+                        <option value="us">United States of America</option>
+                        <option value="uk">The United Kingdom</option>
+                        <option value="ch">People's Republic of China</option>
+                        <option value="jp">Japan</option>
+                    </select>
+                </p>
+                <p>
+                    City:&nbsp;
+                    <input type="checkbox" name="ryazan" id="ryazan"/><label for="ryazan">Ryazan</label>
+                    <input type="checkbox" name="moscow" id="moscow"/><label for="moscow">Moscow</label>
+                </p>
+                <p>
+                    <label for="photo">Photography:&nbsp;</label>
+                    <input type="file" name="photo" id="photo" accept="image/*" />
+                </p>
+                <hr />
+                <p>
+                    <label for="title">Title:&nbsp;</label>
+                    <select name="title" id="title" size="8">
+                        <optgroup label="Technologies">
+                            <option value="web_master">Web Master</option>
+                            <option value="db_admin">Database Administrator</option>
+                            <option value="comp_design">Computer-aided design</option>
+                        </optgroup>
+                        <optgroup label="Finance">
+                            <option value="econ_planing">Economic Planning</option>
+                            <option value="management_accounting">Management accounting</option>
+                            <option value="budgeting_and_planning">Budgeting and planning</option>
+                        </optgroup>
+                    </select>
+                </p>
+                <p>
+                    <label for="salary">Salary:&nbsp;</label>
+                    <input type="range" min="1" max="100" name="salary" id="salary" />
+                </p>
+                <p>
+                    <textarea name="about" cols="60" rows="10" placeholder="Tell us about yourself..."></textarea>
+                </p>
+            </fieldset><!-- End of the Personal data -->
+            
+            <fieldset form="survey">
+                <legend>Contact Information</legend>
+                <p>
+                    <label for="site">Site:&nbsp;</label>
+                    <input type="url" name="site" id="site" />
+                </p>
+                <p>
+                    <label for="email">E-mail:&nbsp;</label>
+                    <input type="email" name="email" id="email" />
+                </p>
+                <p>
+                    <label for="phone">Phone:&nbsp;</label>
+                    <input type="tel" name="phone" id="phone" />
+                </p>
+            </fieldset> <!-- End of the Contact Info -->
+            
+            <p>
+                <label for="password">Password:&nbsp;</label>
+                <input type="password" name="password" id="password" required /> 
+            </p>
+            <input type="submit" form="survey" />
+            <input type="reset" name="reset" form="survey" />
+        </form> <!-- End of the survey form -->
+         
+    </body>
+</html>
