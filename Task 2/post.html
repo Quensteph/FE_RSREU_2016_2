@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>HTML Advanced - Task 2</title>
+        <meta charset="utf-8" />
+        <style>
+            fieldset {
+                width: 500px;
+            }
+            div.labels {
+                float: left;
+                width: 90px;
+                height: 100px;
+            }
+            div.labels label {
+                display: block;
+                padding: 5px;
+            }
+            div.labels label#sex {
+                padding-top: 20px
+            }
+            div.inputs ul {
+                list-style-type: none;
+            }
+            div.inputs input[type="text"],
+            div.inputs input[type="url"],
+            div.inputs input[type="email"],
+            div.inputs input[type="tel"]{
+                display: block;
+                margin: 5px;
+            }
+            input[type="submit"] {
+                margin-top: 5px;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <h1>Registration Form</h1>
+        <form action="https://httpbin.org/post" method="post" name="registration_form" id="registration_form">
+            <fieldset form="registration_form">
+                <legend>Personal data</legend>
+                <div class="labels">
+                    <label for="first_name">First Name:&nbsp;</label>
+                    <label for="surname">Surname:&nbsp;</label>
+                    <label id="sex">Sex:&nbsp;</label>
+                </div>
+                
+                <div class="inputs">
+                    <input type="text" name="first_name" id="first_name" />
+                    <input type="text" name="surname" id="surname" />
+                    <ul>
+                        <li>
+                            <input type="radio" name="sex" id="male" value="male" required>
+                            <label for="male">Male</label>
+                        </li>
+                        <li>
+                            <input type="radio" name="sex" id="female" value="female">
+                            <label for="female">Female</label>
+                        </li>
+                    </ul>
+                </div>
+            </fieldset>
+            
+            <fieldset form="registration_form">
+                <legend>Contact Information</legend>
+                <div class="labels">
+                    <label for="site">Site:&nbsp;</label>
+                    <label for="email">E-mail:&nbsp;</label>
+                    <label for="phone">Phone:&nbsp;</label>
+                </div>
+                
+                <div class="inputs">
+                    <input type="url" name="site" id="site" />
+                    <input type="email" name="email" id="email" />
+                    <input type="tel" name="phone" id="phone" />
+                </div>
+            </fieldset>
+            <input type="submit" value="Submit" name="submit" id="submit" form="registration_form" />
+        </form>
+    </body>
+</html>
