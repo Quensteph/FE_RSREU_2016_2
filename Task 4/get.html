@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>HTML Advanced - Task 4</title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    
+    <body>
+        
+        <h1>The Form</h1>
+
+        <form action="https://httpbin.org/get" method="get" name="survey" id="survey">
+            <fieldset form="survey">
+                <legend>Personal data</legend>
+                <div class="first_name">
+                    <label for="surname">First Name</label>
+                    <input type="text" name="first_name" id="first_name" />
+                </div>
+                <div class="middle_name">
+                    <label for="first_name">Middle Name</label>
+                    <input type="text" name="middle_name" id="middle_name" />
+                </div>
+                <div class="surname">
+                     <label for="middle_name">Surname&nbsp;</label>
+                    <input type="text" name="surname" id="surname" />
+                </div>
+                <div class="gender-table">
+                    <div class="table-cell">
+                        <span id="radio-label">Sex</span>
+                    </div>
+                    <div class="table-cell" id="radios">
+                        <span id="row1"><input type="radio" name="gender" id="male" /><label for="male">Male</label></span>
+                        <span id="row2"><input type="radio" name="gender" id="female" /><label for="female">Female</label></span>
+                    </div>
+                </div>
+                <div class="age">
+                    <label for="age">Age</label>
+                    <input type="number" min="18" max="101" name="age" id="age" />
+                </div>
+                <div class="country">
+                    <label for="country">Country</label>
+                    <input type="text" list="countries" name="country" id="country" />
+                    <datalist id="countries">
+                        <option value="Russian Federation"></option>
+                        <option value="United States of America"></option>
+                        <option value="The United Kingdom"></option>
+                        <option value="People's Republic of China"></option>
+                        <option value="Japan"></option>
+                    </datalist>
+                </div>
+                <div class="city">
+                    City
+                    <input type="checkbox" name="ryazan" id="ryazan"/><label for="ryazan">Ryazan</label>
+                    <input type="checkbox" name="moscow" id="moscow"/><label for="moscow">Moscow</label>
+                </div>
+                <div class="photo">
+                    <label for="photo">Photography</label>
+                    <input type="file" name="photo" id="photo" accept="image/*" />
+                </div>
+                <hr />
+                <div class="title">
+                    <label id="title-label" for="title-select">Title</label>
+                    <select name="title" id="title-select" size="8">
+                        <optgroup label="Technologies">
+                            <option value="web_master">Web Master</option>
+                            <option value="db_admin">Database Administrator</option>
+                            <option value="comp_design">Computer-aided design</option>
+                        </optgroup>
+                        <optgroup label="Finance">
+                            <option value="econ_planing">Economic Planning</option>
+                            <option value="management_accounting">Management accounting</option>
+                            <option value="budgeting_and_planning">Budgeting and planning</option>
+                        </optgroup>
+                    </select>
+                </div>
+                <div class="salary">
+                    <label for="salary">Salary</label>
+                    <input type="range" min="1" max="100" name="salary" id="salary" />
+                </div>
+                <div class="about">
+                    <textarea name="about" cols="60" rows="10" placeholder="Tell us about yourself..."></textarea>
+                </div>
+            </fieldset><!-- End of the Personal data -->
+            
+            <fieldset form="survey">
+                <legend>Contact Information</legend>
+                <div class="site">
+                    <label for="site">Site:&nbsp;</label>
+                    <input type="url" name="site" id="site" />
+                </div>
+                <div class="email">
+                    <label for="email">E-mail:&nbsp;</label>
+                    <input type="email" name="email" id="email" />
+                </div>
+                <div class="phone">
+                    <label for="phone">Phone:&nbsp;</label>
+                    <input type="tel" name="phone" id="phone" />
+                </div>
+            </fieldset> <!-- End of the Contact Info -->
+            
+            <div class="password">
+                <label for="password">Password:&nbsp;</label>
+                <input type="password" name="password" id="password" required /> 
+            </div>
+            
+            <hr />
+            
+            <div class="controls">
+                <input type="submit" form="survey" />
+                <input type="reset" name="reset" form="survey" />
+            </div>
+        </form> <!-- End of the survey form -->
+          
+    </body>
+</html>

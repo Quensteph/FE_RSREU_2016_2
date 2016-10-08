@@ -1,0 +1,66 @@
+form div {
+    padding-top: 5px;
+}
+.first_name input {
+    margin-left: 16px;
+}
+.surname input {
+    margin-left: 27px;
+}
+.gender-table {
+    display: table;
+}
+.table-cell {
+    display: table-cell;
+}
+#radios {
+    padding-left: 67px;
+}
+#radio-label {
+    position: relative;
+    top: 10px;
+}
+#row1 {
+    display: block;
+}
+#row2 {
+    display: block;
+    padding-top: 5px;
+}
+.age input {
+    margin-left: 61px;
+    width: 173px;
+}
+.country input {
+    margin-left: 36px;
+    width: 173px;
+}
+.city input:nth-child(1) {
+    margin-left: 65px;
+}
+.photo input {
+    margin-left: 6px;
+}
+#title-label {
+    position: relative;
+    bottom: 65px;
+}
+#title-select {
+    margin-left: 59px;
+}
+.salary input {
+    margin-left: 49px;
+}
+.site input {
+    margin-left: 55px;
+}
+.email input {
+    margin-left: 36px;
+}
+.phone input {
+    margin-left: 40px;
+}
+.password {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
