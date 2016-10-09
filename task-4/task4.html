@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>HTML Practice - Task 2</title>
+        <meta charset="utf-8" />
+        
+        <style>
+            img {
+                border: 0;
+            }
+            .pic {
+                width: 438px;
+                height: 291px;
+            }
+            #bordered {
+                border: 2px solid;
+                width: 200px;
+                height: 200px;
+            }
+            #google-link {
+                width: 500px;
+                height: 169px;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div id="top">
+            <a href="#bottom">Go to bottom</a>
+        </div>
+        
+        <header>
+            <h1>Task 4</h1>
+            <h2>Task Description</h2>
+            <ul>
+                <li>Display five different images. Skip two lines between each image. Each image should have a title.</li>
+                <li>Display an image that has a border of size 2, a width of 200, and a height of 200.</li>
+                <li>Display an image that when clicked will link to a search engine of your choice (should be opened in a new window).</li>
+                <li>Display an image that when clicked will link itself and will display the image in the browser by itself.</li>
+            </ul>
+        </header>
+        
+        <div class="contents">
+            <h2>Contents:</h2>
+            <ol>
+                <li><a href="#five-img">Five Images</a></li>
+                <li><a href="#border-img">Bordered Image</a></li>
+                <li><a href="#search-img">Image Link to a Search Engine</a></li>
+                <li><a href="#self-img">Image Opening Itself in a New Window</a></li>
+            </ol>
+        </div>
+        
+        <div id="five-img">
+            <h2>Five Images</h2>
+            <img class="pic" src="https://pixabay.com/static/uploads/photo/2015/08/14/08/29/images-888133_960_720.jpg" alt="pic-one" title="pic-one" />
+            <br />
+            <br />
+            <img class="pic" src="https://pixabay.com/static/uploads/photo/2016/03/28/12/35/cat-1285634_960_720.png" alt="pic-two" title="pic-two" />
+            <br />
+            <br />
+            <img class="pic" src="https://pixabay.com/static/uploads/photo/2016/05/12/20/58/water-lilies-1388690_960_720.jpg" alt="pic-three" title="pic-three" />
+            <br />
+            <br />
+            <img class="pic" src="http://eyespired.nl/wp-content/uploads/2013/09/bronzen-beelden-matteo-pugliese-607x458.jpg" alt="pic-four" title="pic-four" />
+            <br />
+            <br />
+            <img class="pic" src="https://pixabay.com/static/uploads/photo/2015/09/06/20/30/sport-927762_960_720.jpg" alt="pic-five" title="pic-five" />
+        </div>
+        
+        <div id="border-img">
+            <h2>Bordered Image</h2>
+            <img id="bordered" src="http://www.publicdomainpictures.net/pictures/80000/nahled/rainbow-background-clipart-1392210545Trf.jpg" alt="pic-five" title="bordered-200x200" />
+        </div>
+        
+        <div id="search-img">
+            <h2>Image Link to a Search Engine</h2>
+            <a href="https://www.google.com/" target="_blank"><img id="google-link" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2000px-Google_2015_logo.svg.png" alt="Google" /></a>
+        </div>
+        
+        <div id="self-img">
+            <h2>Image Opening Itself in a New Window</h2>
+            <a href="http://www.menucool.com/slider/jsImgSlider/images/image-slider-2.jpg" target="_blank"><img src="http://www.menucool.com/slider/jsImgSlider/images/image-slider-2.jpg" alt="picture-link"></a>
+        </div>
+        
+        <div id="bottom">
+            <a href="#top">Go to top</a>
+        </div>
+    </body>
+</html>
