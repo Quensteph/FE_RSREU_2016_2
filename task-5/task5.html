@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>HTML Practice - Task 2</title>
+        <meta charset="utf-8" />
+        
+        <style>
+            img {
+                border: 0;
+            }
+            .pic {
+                width: 438px;
+                height: 291px;
+            }
+            #bordered {
+                border: 2px solid;
+                width: 200px;
+                height: 200px;
+            }
+            #google-link {
+                width: 500px;
+                height: 169px;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div id="top">
+            <a href="#bottom">Go to bottom</a>
+        </div>
+        
+        <header>
+            <h1>Task 5</h1>
+            <h2>Task Description</h2>
+            <ul>
+                <li>Using only HTML create equation according to the screenshot.</li>
+                <li>Add nested list according to the screenshot.</li>
+            </ul>
+        </header>
+        
+        <div class="contents">
+            <h2>Contents:</h2>
+            <ol>
+                <li><a href="#equation">Equation</a></li>
+                <li><a href="#nested-list">Nested List</a></li>
+            </ol>
+        </div>
+        
+        <div id="equation">
+            <h2>Equation</h2>
+            <h3>Entities only:</h3>
+            <p>&lambda;&sup3;&nbsp;&minus;&nbsp;&Iota;&#x2081;&lambda;&sup2;&nbsp;&plus;&nbsp;&Iota;&#x2082;&lambda;&nbsp;&minus;&nbsp;&Iota;&#x2083;&nbsp;&equals;&nbsp;&#48;</p>
+            <h3>Entities, &lt;sup&gt;, &lt;sup&gt;</h3>
+            <p>&lambda;<sup>&#51;</sup>&nbsp;&minus;&nbsp;&Iota;<sub>&#49;</sub>&lambda;<sup>&#50;</sup>&nbsp;&plus;&nbsp;&Iota;<sub>&#50;</sub>&lambda;&nbsp;&minus;&nbsp;&Iota;<sub>&#51;</sub>&nbsp;&equals;&nbsp;&#48;</p>
+        </div>
+        
+        <div id="nested-list">
+            <h2>Nested List</h2>
+            <ul>
+                <li>Item 1</li>
+                <li style="list-style-type: none;">
+                    <ul>
+                        <li>Item 1.1</li>
+                        <li>Item 1.2</li>
+                    </ul>
+                </li>
+                <li>Item 2</li>
+                <li style="list-style-type: none;">
+                    <ol>
+                        <li>Item 2.1</li>
+                        <li>Item 2.2</li>
+                    </ol>
+                </li>
+            </ul>
+            
+        </div>
+        
+        <div id="bottom">
+            <a href="#top">Go to top</a>
+        </div>
+    </body>
+</html>
