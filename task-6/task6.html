@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>HTML Practice - Task 2</title>
+        <meta charset="utf-8" />
+        
+        <style>
+            table, th, td {
+                border: 1px solid black;
+            }
+            table {
+                margin-bottom: 15px;
+            }
+            #gem {
+                width: 200px;
+            }
+            .data {
+                width: 100px;
+            }
+            #centered {
+                text-align: center;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div id="top">
+            <a href="#bottom">Go to bottom</a>
+        </div>
+        
+        <header>
+            <h1>Task 6</h1>
+            <h2>Task Description</h2>
+            <ul>
+                <li>Create the table according to the give screenshot.</li>
+            </ul>
+        </header>
+        
+        <div class="contents">
+            <h2>Contents:</h2>
+            <ol>
+                <li><a href="#table">The Table</a></li>
+            </ol>
+        </div>
+        
+        <div id="table">
+            <h2>The Table</h2>
+            <table>
+                <caption>Mining of precious minerals</caption>
+                <tbody>
+                    <tr>
+                        <th>&nbsp;</th>
+                        <th>2010</th>
+                        <th>2012</th>
+                        <th>2014</th>
+                    </tr>
+                    <tr>
+                        <td id="gem">Sapphires</td>
+                        <td rowspan="2" class="data">1483</td>
+                        <td class="data">4532</td>
+                        <td class="data">6743</td>
+                    </tr>
+                    <tr>
+                        <td>Rubies</td>
+                        <td>3835</td>
+                        <td>7482</td>
+                    </tr>
+                    <tr>
+                        <td>Diamonds</td>
+                        <td>683</td>
+                        <td colspan="2" id="centered">238</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+            
+        <div id="bottom">
+            <a href="#top">Go to top</a>
+        </div>
+    </body>
+</html>
