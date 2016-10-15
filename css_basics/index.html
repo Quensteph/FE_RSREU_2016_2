@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>CSS Basics</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <header>
+        <h1 id="main-heading">CSS Basics</h1>
+    </header><!-- End of the header -->
+
+    <section>
+        <h2 id="section-heading">CSS stands for Cascading Style Sheets</h2>
+        <article>
+            <h3 class="article-heading left-padded">Width, Height, Margin, Padding</h3>
+            <p class="left-padded"><span class="term">width</span> &amp; <span class="term">height</span> can be set in relative units (like em, rem, vw, vh, percents):</p>
+            <div id="relative-width" class="example">For example, this div's width is 50%.</div>
+            <p class="left-padded"><span class="term">width</span> &amp; <span class="term">height</span> can be set in absolute units (like cm, mm, in, pt, px):</p>
+            <div id="absolute-height" class="example"><span class="centered">For example, this div's height is 300px.</span></div>
+            <p class="left-padded">The <span class="term">margin</span> properties set the size of the white space OUTSIDE the border.</p>
+            <p class="left-padded">The <span class="term">padding</span> properties set the size of the white space INSIDE the border.</p>
+        </article><!-- End of the Width, Height, Margin, Padding -->
+
+        <article>
+            <h3 class="article-heading left-padded">Background</h3>
+            <p class="left-padded">Background can be set to specific color using <span class="term">background-color</span>.</p>
+            <div id="bgc" class="example">For example, this div's background-color is set to &#35;d9bfad</div>
+            <p class="left-padded">Background can be set to specific image using <span class="term">background-image</span>.</p>
+            <div id="bgi" class="example"><span class="centered">For example, this div's background-image is set to a certain image's URL.</span></div>
+            <p class="left-padded"><span class="term">background-image</span> can be repeated using <span class="term">background-repeat</span> property.</p>
+            <p class="left-padded">The image used in the next example is a 50x50 tile: <img src="http://www-mtl.mit.edu/img/bg_01.gif" alt="Tile" id="tile" /></p>
+            <div id="bgi-repeat" class="example"><span class="centered">Background is repeated horizontally using <span class="term">repeat-x</span> value.</span></div>
+        </article><!-- End of the Background -->
+
+        <article>
+            <h3 class="article-heading left-padded">CSS Units</h3>
+            <p class="left-padded">CSS Units can be relative or absolute. Since various units are used throughout this page, there will be no special dedicated example...</p>
+        </article><!-- End of the CSS Units -->
+
+        <article>
+            <h3 class="article-heading left-padded">CSS Colors</h3>
+            <p class="left-padded">CSS has different methods to describe color:</p>
+            <ul>
+                <li>Color Name</li>
+                <li>Hexadicimal Value</li>
+                <li>RGBA Value</li>
+            </ul>
+            <p class="left-padded">Color Names are limited to 147 units. Every possible color can be found at <a id="colors-link" href="http://www.colors.commutercreative.com/grid/">147 Colors</a></p>
+            
+            <table id="color-name-table">
+                <caption>Color Name Examples</caption>
+                <tbody>
+                    <tr>
+                        <td class="color-name-table-cell" style="background-color: MediumAquaMarine;">MediumAquaMarine</td>
+                        <td class="color-name-table-cell" style="background-color: CadetBlue;">CadetBlue</td>
+                        <td class="color-name-table-cell" style="background-color: LavenderBlush;">LavenderBlush</td>
+                    </tr>
+                    <tr>
+                        <td class="color-name-table-cell" style="background-color: LightGoldenRodYellow;">LightGoldenRodYellow</td>
+                        <td class="color-name-table-cell" style="background-color: DeepSkyBlue;">DeepSkyBlue</td>
+                        <td class="color-name-table-cell" style="background-color: PowderBlue;">PowderBlue</td>
+                    </tr>
+                    <tr>
+                        <td class="color-name-table-cell" style="background-color: Linen;">Linen</td>
+                        <td class="color-name-table-cell" style="background-color: OliveDrab;">OliveDrab</td>
+                        <td class="color-name-table-cell" style="background-color: DeepPink;">DeepPink</td>
+                    </tr>
+                </tbody>
+            </table><!-- End of Color names table -->
+
+            <p class="left-padded">Hexadicimal values for colors goes in <span class="term">&#35;RRGGBB</span> format.</p>
+            <table id="hex-color-table">
+                <caption>Hex Color Examples</caption>
+                <tbody>
+                    <tr>
+                        <td class="hex-color-table-cell" style="background-color: #110c34; color: #d9bfad;">#110c34</td>
+                        <td class="hex-color-table-cell" style="background-color: #e6f524;">#e6f524</td>
+                        <td class="hex-color-table-cell" style="background-color: #fa6dfa;">#fa6dfa</td>
+                    </tr>
+                    <tr>
+                        <td class="hex-color-table-cell" style="background-color: #4bfd5f;">#4bfd5f</td>
+                        <td class="hex-color-table-cell" style="background-color: #19126d; color: #d9bfad;">#19126d</td>
+                        <td class="hex-color-table-cell" style="background-color: #6235c2; color: #f2f2f2;">#6235c2</td>
+                    </tr>
+                    <tr>
+                        <td class="hex-color-table-cell" style="background-color: #302a2d; color: #d9bfad;">#302a2d</td>
+                        <td class="hex-color-table-cell" style="background-color: #f7864a;">#f7864a</td>
+                        <td class="hex-color-table-cell" style="background-color: #5e429f; color: #f2f2f2;">#5e429f</td>
+                    </tr>
+                </tbody>
+            </table><!-- End of hex Color table -->
+
+            <p class="left-padded">RGBA values for colors goes in <span class="term">rgba(red, green, blue, alpha)</span> format.</p>
+            <table id="rgba-color-table">
+                <caption>RGBA Color Examples</caption>
+                <tbody>
+                    <tr>
+                        <td class="rgba-color-table-cell" style="background-color: rgba(105, 234, 217, 0.1);">rgba(105, 234, 217, 0.1)</td>
+                        <td class="rgba-color-table-cell" style="background-color: rgba(59, 249, 85, 0.2);">rgba(59, 249, 85, 0.2)</td>
+                        <td class="rgba-color-table-cell" style="background-color: rgba(170, 39, 89, 0.3);">rgba(170, 39, 89, 0.3)</td>
+                    </tr>
+                    <tr>
+                        <td class="rgba-color-table-cell" style="background-color: rgba(29, 12, 104, 0.4);">rgba(29, 12, 104, 0.4)</td>
+                        <td class="rgba-color-table-cell" style="background-color: rgba(211, 0, 81, 0.5);">rgba(211, 0, 81, 0.5)</td>
+                        <td class="rgba-color-table-cell" style="background-color: rgba(135, 236, 242, 0.6);">rgba(135, 236, 242, 0.6)</td>
+                    </tr>
+                    <tr>
+                        <td class="rgba-color-table-cell" style="background-color: rgba(2, 117, 117, 0.7);">rgba(2, 117, 117, 0.7)</td>
+                        <td class="rgba-color-table-cell" style="background-color: rgba(70, 252, 91, 0.8);">rgba(70, 252, 91, 0.8)</td>
+                        <td class="rgba-color-table-cell" style="background-color: rgba(140, 251, 255, 0.9);">rgba(140, 251, 255, 0.9)</td>
+                    </tr>
+                </tbody>
+            </table><!-- End of rgba Color table -->
+        </article><!-- End of CSS Colors -->
+
+        <article>
+            <h3 class="article-heading left-padded">CSS Font Families</h3>
+            <p class="left-padded"><span class="term">font-size</span> of this page is set in EMs. Try to change zoom level in your browser to see the difference.</p>
+            <p class="left-padded">Primary font property is <span class="term">font-family</span>.</p>
+            <p class="left-padded">Fonts are divided into three main groups:</p>
+            <ul>
+                <li>Serif</li>
+                <li>Sans-serif</li>
+                <li>Monospace</li>
+            </ul>
+            
+            <table id="serif-fonts">
+                <caption>Common Serif Fonts</caption>
+                <thead>
+                    <tr>
+                        <th class="font-example">font-family</th>
+                        <th class="font-example">Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="font-example">Georgia, serif <span style="font-size: 0.75em;">(this page default)</span></td>
+                        <td class="font-example lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                    </tr>
+                    <tr>
+                        <td class="font-example">"Palatino Linotype", "Book Antiqua", Palatino, serif</td>
+                        <td id="palantino" class="font-example lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                    </tr>
+                    <tr>
+                        <td class="font-example">"Times New Roman", Times, serif</td>
+                        <td id="times" class="font-example lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                    </tr>
+                </tbody>
+            </table><!-- End of Serif fonts table -->
+
+            <table id="sans-serif-fonts">
+                <caption>Common Sans-Serif Fonts</caption>
+                <thead>
+                    <tr>
+                        <th class="font-example">font-family</th>
+                        <th class="font-example">Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="font-example">Arial, Helvetica, sans-serif</td>
+                        <td id="arial" class="font-example lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                    </tr>
+                    <tr>
+                        <td class="font-example">Impact, Charcoal, sans-serif</td>
+                        <td id="impact" class="font-example lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                    </tr>
+                    <tr>
+                        <td class="font-example">Verdana, Geneva, sans-serif <span style="font-size: 0.75em;">(this page default)</span></td>
+                        <td id="verdana" class="font-example lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                    </tr>
+                </tbody>
+            </table><!-- End of sans-serif fonts table -->
+
+            <table id="monospace-fonts">
+                <caption>Common Monospace Fonts</caption>
+                <thead>
+                    <tr>
+                        <th class="font-example">font-family</th>
+                        <th class="font-example">Example</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="font-example">"Courier New", Courier, monospace</td>
+                        <td id="courier" class="font-example lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                    </tr>
+                    <tr>
+                        <td class="font-example">"Lucida Console", Monaco, monospace</td>
+                        <td id="lucida-console" class="font-example lorem">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</td>
+                    </tr>
+                </tbody>
+            </table><!-- End of monospace fonts table -->
+        </article><!-- End of CSS font-families -->
+
+        <article>
+            <h3 class="article-heading left-padded">CSS Font Properties</h3>
+            <p class="left-padded"><span class="term">font-style</span> is mostly used to specify italic text.</p>
+            <ul>
+                <li class="font-li"><span class="term">normal</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui, mollitia rerum id facere doloribus, totam autem quam minima incidunt sit velit similique temporibus aliquam magni error tempora nemo recusandae officia.</li>
+                <li class="font-li"><span class="term">italic</span> <span  style="font-style: italic;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum perferendis reiciendis non fugit quisquam repellat facere, facilis possimus rerum numquam totam quaerat. Ad porro dolorem, nam magni! Itaque, quos repellat?</span></li>
+                <li class="font-li"><span class="term">oblique</span> <span style="font-style: oblique;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam repellat alias odio aspernatur a repudiandae pariatur veritatis, quae ut laudantium, quisquam quas nesciunt officiis cumque corporis id deleniti dignissimos exercitationem.</span></li>
+            </ul>
+            <hr />
+            <p class="left-padded"><span class="term">font-variant</span> can display a small-caps font, all lowercase letters are converted to uppercase letters.</p>
+            <ul>
+                <li class="font-li"><span class="term">normal</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Et distinctio, mollitia inventore voluptatibus nobis deleniti, amet tempora perspiciatis voluptates reprehenderit vel labore error qui maxime numquam in excepturi explicabo ipsa.</li>
+                <li class="font-li"><span class="term">small-caps</span> <span style="font-variant: small-caps;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga vitae rerum recusandae cumque, illo, perspiciatis perferendis quis, id necessitatibus repudiandae excepturi ipsam dolores temporibus nesciunt velit. Vero architecto, nam distinctio.</span></li>
+            </ul>
+            <hr />
+            <p class="left-padded"><span class="term">font-weight</span> sets how thick or thin characters in text should be displayed. This example shows Arial font weights. As you can see this font supports only 3 out of 9 font weights.</p>
+            <ul style="font-family: Arial, sans-serif">
+                <li class="font-li"><span class="term">100-500</span> <span style="font-weight: 100;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error fugit repellat deserunt quidem eos, itaque eligendi similique quae quis necessitatibus pariatur quisquam praesentium veniam cum iure molestiae consectetur voluptates ipsum.</span></li>
+                <li class="font-li"><span class="term">600-700</span> <span style="font-weight: 600;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error fugit repellat deserunt quidem eos, itaque eligendi similique quae quis necessitatibus pariatur quisquam praesentium veniam cum iure molestiae consectetur voluptates ipsum.</span></li>
+                <li class="font-li"><span class="term">800-900</span> <span style="font-weight: 800;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error fugit repellat deserunt quidem eos, itaque eligendi similique quae quis necessitatibus pariatur quisquam praesentium veniam cum iure molestiae consectetur voluptates ipsum.</span></li>
+            </ul>
+        </article><!-- End of font properties -->
+        
+        <article>
+            <h3 class="article-heading left-padded">CSS Text Properties</h3>
+            <p class="left-padded"><span class="term">color</span> is used to set the color of the text. You can use color's name, hex or rgb value.</p>
+            <p class="left-padded"><span class="term">text-align</span> is used to set the horizontal alignment of a text.</p>
+            <table id="text-align-table">
+                <caption>Text Alignment</caption>
+                <thead>
+                    <tr>
+                        <th class="text-align-table-cell">Right</th>
+                        <th class="text-align-table-cell">Center</th>
+                        <th class="text-align-table-cell">Left</th>
+                        <th class="text-align-table-cell">Justify</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-align-table-cell" style="text-align: right;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate aliquid enim perspiciatis velit, hic repellendus ab. Ad ab odit molestiae cupiditate voluptates iure, dolorum est voluptatibus ea pariatur quae, exercitationem!</td>
+                        <td class="text-align-table-cell" style="text-align: center;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Necessitatibus id, cupiditate nobis, soluta, fuga, suscipit delectus amet odit enim commodi fugiat aliquam veritatis illo incidunt voluptatem tenetur nemo quis labore!</td>
+                        <td class="text-align-table-cell" style="text-align: left;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio sed perspiciatis accusantium blanditiis fuga sit eius, libero reprehenderit, deserunt inventore laboriosam beatae sequi nostrum maxime. Possimus, totam facere! Velit, accusamus.</td>
+                        <td class="text-align-table-cell" style="text-align: justify;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum numquam expedita perspiciatis mollitia quae rem harum ex unde reiciendis. Autem aperiam, dolorem laborum possimus. Magnam ipsa soluta iusto distinctio omnis.</td>
+                    </tr>
+                </tbody>
+            </table><!-- End of text align table -->
+
+            <p class="left-padded"><span class="term">text-decoration</span> is used to set or remove decorations from text.</p>
+            <ul>
+                <li class="font-li"><span class="term">line-through</span> <span style="text-decoration: line-through;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt laudantium quae placeat beatae voluptatem excepturi dolore, sit doloremque tempora dolor velit hic accusamus, delectus ipsa magnam rerum architecto est maxime.</span></li>
+                <li class="font-li"><span class="term">overline</span> <span style="text-decoration: overline;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></li>
+                <li class="font-li"><span class="term">underline</span> <span style="text-decoration: underline;">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></li>
+            </ul>
+            <hr />
+            <p class="left-padded"><span class="term">text-transform</span> is used to specify uppercase and lowercase letters in a text.</p>
+            <ul>
+                <li class="font-li"><span class="term">capitalize</span> <span style="text-transform: capitalize;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis, mollitia saepe et, id molestias earum, voluptatibus animi alias magnam atque recusandae veniam ut! Est nemo, eos, distinctio laboriosam vitae itaque.</span></li>
+                <li class="font-li"><span class="term">lowercase</span> <span style="text-transform: lowercase;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore quam nemo quo cupiditate ullam numquam non repellendus assumenda. Delectus harum sit hic dolore quia ratione provident odio animi explicabo doloremque!</span></li>
+                <li class="font-li"><span class="term">uppercase</span> <span style="text-transform: uppercase;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat tempora molestias veritatis molestiae rerum delectus quisquam dolores aliquid dolorum accusamus fugit porro, vero quos beatae cupiditate ducimus iusto! Placeat, ut.</span></li>
+            </ul>
+            <hr />
+            <p class="left-padded"><span class="term">text-indent</span> is used to specify the indentation of the first line of a text.</p>
+            <p class="left-padded" style="text-indent: 60px;"><span class="term">60px</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita soluta aperiam, reiciendis voluptate debitis, unde. Similique temporibus fugit animi illo quam laboriosam, eos sint eaque, dolore labore ipsa error eligendi!</p>
+            <p class="left-padded" style="text-indent: 3em;"><span class="term">3em</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita soluta aperiam, reiciendis voluptate debitis, unde. Similique temporibus fugit animi illo quam laboriosam, eos sint eaque, dolore labore ipsa error eligendi!</p>
+            <p class="left-padded" style="text-indent: 13%;"><span class="term">13%</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Expedita soluta aperiam, reiciendis voluptate debitis, unde. Similique temporibus fugit animi illo quam laboriosam, eos sint eaque, dolore labore ipsa error eligendi!</p>
+            <hr />
+            <p class="left-padded"><span class="term">direction</span> specifies the text direction/writing direction.</p>
+            <p class="left-padded"><span class="term">ltr</span> Default variant, nothing special.</p>
+            <p class="left-padded"><span class="term">rtl</span> <bdo dir="rtl">Weird variant, for Arabic languages and so on.</bdo></p>
+            <hr />
+            <p class="left-padded"><span class="term">letter-spacing</span> increases or decreases the space between characters in a text.</p>
+            <p class="left-padded"><span class="term">7px</span> <span style="letter-spacing: 7px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga necessitatibus omnis officia sit, atque fugit, minima ex odit voluptatibus praesentium, explicabo libero repudiandae obcaecati accusamus rem quis nostrum quam! Earum.</span></p>
+            <p class="left-padded"><span class="term">0.9em</span> <span style="letter-spacing: 0.9em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus maiores at culpa, nostrum eligendi tempora adipisci perferendis mollitia dicta repellat temporibus asperiores excepturi debitis placeat accusamus, quaerat aperiam vero harum?</span></p>
+            <hr />
+            <p class="left-padded"><span class="term">text-shadow</span> adds shadow to text.</p>
+            <p class="left-padded"><span class="term">h-shadow</span> <span style="text-shadow: 3px 0 0 aqua;">The position of the horizontal shadow.</span></p>
+            <p class="left-padded"><span class="term">v-shadow</span> <span style="text-shadow: 0 3px 0 aqua;">The position of the vertical shadow.</span></p>
+            <p class="left-padded"><span class="term">blur-radius</span> <span style="text-shadow: 6px -2px 1.5em aqua;">Optional. The blur radius.</span></p>
+            <p class="left-padded"><span class="term">color</span> <span style="text-shadow: 6px -2px 1.5em maroon;">Optional. The color of the shadow.</span></p>
+            <hr />
+            <p class="left-padded"><span class="term">line-height</span> specifies the line height.</p>
+            <p class="left-padded" style="line-height: 35px;"><span class="term">35px</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat cumque velit iste sequi quos praesentium facere rem accusantium, dignissimos odio dolorem omnis sint itaque necessitatibus voluptatem at doloribus corporis aliquam.</p>
+            <p class="left-padded" style="line-height: 70px;"><span class="term">70px</span> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat cumque velit iste sequi quos praesentium facere rem accusantium, dignissimos odio dolorem omnis sint itaque necessitatibus voluptatem at doloribus corporis aliquam.</p>
+            <hr />
+            <p class="left-padded"><span class="term">vertical-align</span> sets vertical alignment of an element. Example of <span class="term">vertical-align</span> can be seen in the color section.</p>
+            <p class="left-padded"><span class="term">word-spacing</span> <span style="word-spacing: 15px;">increases or decreases the white space between words.</span></p>
+        </article><!-- End of my suffering -->
+    </section><!-- End of CSS Basics -->
+    
+    <footer>
+        <p class="left-padded">Contact me via <a id="mail" href="mailto:yuramonogatari@gmail.com">E-mail</a></p>
+        <p class="left-padded">Copyright &copy; Sergey Shcherbakov 2016</p>
+    </footer>
+</body>
+</html>

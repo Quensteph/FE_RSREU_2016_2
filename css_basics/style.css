@@ -1,0 +1,174 @@
+body {
+    margin: 0;
+    color: #3d3741;
+    background-color: #f2f2f2;
+    font-family: Georgia, serif;
+} 
+header, footer {
+    width: 100%;
+    height: 100px;
+    background-color: #8f808d;
+    display: table;
+} 
+h1, h2, h3, caption {
+    font-family: Verdana, Geneva, sans-serif;
+} 
+h3 {
+    font-size: 1.5em;
+} 
+#main-heading {
+    margin-top: 0;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 2.75em;
+} 
+section {
+    display: table;
+    width: 100%;
+    padding-top: 25px;
+    background-color: #d9bfad;
+} 
+#section-heading {
+    display: table-row;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 2em;
+} 
+article {
+    display: table-row;
+    background-color: #f2f2f2;
+}
+.example {
+    border: 1px solid #3d3741;
+    margin-left: 8px;
+    width: 25%;
+}
+#relative-width {
+    width: 50%;
+}
+#absolute-height {
+    height: 300px;
+    display: table;
+}
+.left-padded {
+    padding-left: 8px;
+}
+.term {
+    color: #f2e6e9;
+    background-color: #3d3741;
+    padding: 3px;
+    border-radius: 8px;
+}
+.centered {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+#bgc {
+    background-color: #d9bfad;
+}
+#bgi {
+    height: 300px;
+    display: table;
+    background-image: url("http://www.solidbackgrounds.com/images/two/2560x1440/2560x1440-beaver-beige-two-color-background.jpg");
+    background-size: 100%;
+}
+#tile {
+    display: inline;
+    vertical-align: middle;
+}
+#bgi-repeat {
+    height: 300px;
+    display: table;
+    background-image: url("http://www-mtl.mit.edu/img/bg_01.gif");
+    background-position: top left;
+    background-repeat: repeat-x;
+}
+#colors-link {
+    text-decoration: none;
+    color: #8f808d;
+    font-size: 1.5em;
+}
+#colors-link:hover,
+#colors-link:active {
+    color: #3d3741;
+}
+caption {
+    font-size: 1.75em;
+}
+#color-name-table,
+.color-name-table-cell,
+#hex-color-table,
+.hex-color-table-cell,
+#rgba-color-table,
+.rgba-color-table-cell,
+#serif-fonts,
+#sans-serif-fonts,
+#monospace-fonts,
+.font-example,
+#text-align-table,
+.text-align-table-cell {
+    border: 1px solid #3d3741;
+    margin: 8px;
+}
+.color-name-table-cell,
+.hex-color-table-cell,
+.rgba-color-table-cell {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+}
+#serif-fonts,
+#sans-serif-fonts,
+#monospace-fonts,
+#text-align-table {
+    width: 50%;
+    border-collapse: collapse;
+}
+#text-align-table {
+    width: 95%;
+}
+.text-align-table-cell {
+    width: 25%;
+    margin-right: 8px;
+}
+.font-example {
+    width: 50%;
+    font-size: 1.1em;
+}
+.lorem {
+    text-align: center;
+}
+#times {
+    font-family: "Times New Roman", Times, serif !important;
+}
+#palantino {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif !important;
+}
+#arial {
+    font-family: Arial, Helvetica, sans-serif !important;
+}
+#impact {
+    font-family: Impact, Charcoal, sans-serif !important;
+}
+#verdana {
+    font-family: Verdana, Geneva, sans-serif !important;
+}
+#courier {
+    font-family: "Courier New", Courier, monospace !important;
+}
+#lucida-console {
+    font-family: "Lucida Console", Monaco, monospace !important;
+}
+.font-li {
+    margin-top: 10px;
+}
+#mail {
+    text-decoration: none;
+    color: #f2e6e9;
+}
+#mail:hover,
+#mail:active {
+    color: #3d3741;
+}
