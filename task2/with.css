@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Tahoma, Geneva, sans-serif;
+}
+th {
+    padding: 5px;
+    background-color: rgb(227,234,243);
+    color: rgb(117,134,174);
+    font-size: 0.7em;
+    text-transform: uppercase;
+}
+tr.odd {
+    background-color: rgb(242,246,250);
+}
+tr.even {
+    background-color: rgb(232,237,244);
+}
+tr.odd:hover {
+    background-color: rgb(212,217,224);
+}
+tr:hover {
+    background-color: rgb(212,217,224);
+}
+td {
+    font-size: 0.9em;
+    padding: 15px;
+    color: rgb(76,99,126);
+}
+td.capital {
+    text-transform: capitalize;
+}
