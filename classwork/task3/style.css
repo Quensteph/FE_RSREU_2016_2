@@ -1,0 +1,15 @@
+#first {
+    background-color: #569099;
+    color: #fff;
+    font-size: 2.5em;
+    font-weight: 700;
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+#second {
+    background-color: #CAD8D0;
+    padding: 10px 35px 10px 15px;
+    width: 270px;
+}

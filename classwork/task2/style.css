@@ -1,0 +1,6 @@
+#inner-shadow {
+  width: 600px;
+  height: 400px;
+  background: url(http://img04.deviantart.net/1556/i/2011/026/9/1/a_rose_on_a_white_background_by_mari_am-d2lsyke.jpg);
+  box-shadow: inset 0px 0px 25px rgba(0,0,0,0.6);
+}
