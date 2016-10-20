@@ -1,0 +1,11 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+#image {
+    width: 350px;
+    height: 240px;
+    margin: 100px auto;
+    border: 2px solid gray;
+    background-image: radial-gradient(circle, rgb(0, 188, 158) 60px, #fff 61px);
+}
