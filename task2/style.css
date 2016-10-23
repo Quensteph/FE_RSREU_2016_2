@@ -1,0 +1,37 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+.arrow-box {
+    margin: 50px auto;
+    border: 5px solid #BFDFF3;
+    height: 100px;
+    width: 400px;
+    padding: 10px 10px 0 10px;
+    background-color: #88B7D5;
+    color: #fff;
+    position: relative;
+}
+.arrow-box::after {
+    content: '';
+    position: absolute;
+	width: 0;
+	height: 0;
+	border-left: 35px solid transparent;
+	border-right: 35px solid transparent;
+	border-bottom: 35px solid #88B7D5;
+    top: -35px;
+    left: 170px;
+}
+.arrow-box::before {
+    content: '';
+    position: absolute;
+	width: 0;
+	height: 0;
+	border-left: 42px solid transparent;
+	border-right: 42px solid transparent;
+	border-bottom: 42px solid #BFDFF3;
+    top: -42px;
+    left: 163px;
+
+}
