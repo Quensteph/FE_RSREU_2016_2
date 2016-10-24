@@ -1,0 +1,162 @@
+body {
+	padding: 0;
+	margin: 0;
+	background-color: #eee;
+}
+.nav {
+	padding: 0;
+	color: #fff;
+	min-width: 420px;
+	height: 30px;
+	background: url('http://furiousblue.com/themes/flow/frontend_assets/images/home/banner_bg.jpg');	
+}
+.nav-left,
+.nav-right {
+	list-style-type: none;
+}
+.nav-left {
+    float: left;
+}
+.nav-right {
+    float: right;
+}
+ul li a {
+	height: 30px;
+	width: 30px;
+	display: inline-block;
+	vertical-align: middle;
+	color: #fff;
+	text-decoration: none;
+}
+.nav li a::after {
+	position: absolute;
+	display: block;
+}
+#mail {
+	width: 47px;
+	position: relative;
+	background-color: #6a9fcc;
+}
+#mail::before {
+	content: '';
+	position: absolute;
+	top: 9px;
+	left: 8px;
+	background: url('icons/mail.png') no-repeat;
+	height: 16px;
+	width: 16px;
+}
+#mail::after {
+    content:'2';
+	line-height: 1.5;
+	text-align: center;
+	font-size: 0.6em;
+	border-radius: 50%;
+	height: 15px;
+	width: 15px;
+	background-color: #E03838;
+	left: 24px;
+	top: 7px;
+}
+#page {
+	width: 68px;
+	position: relative;
+	background-color: #6a9fcc;
+}
+#page::before {
+	content: '';
+	position: absolute;
+	left: 9px;
+	top: 8px;
+	height: 16px;
+	width: 16px;
+	background: url('icons/page.png') center no-repeat;
+}
+#page::after {
+    content:'223986';
+	line-height: 1.7;
+	text-align: center;
+	font-size: 0.6em;
+	border-radius: 50%;
+	height: 17px;
+	width: 38px;
+	background-color: #E03838;
+	left:24px;
+	top: 7px;
+}
+#user {
+	width: 46px;
+	position: relative;
+	background-color: #6a9fcc;
+}
+#user::before {
+	content: '';
+	position: absolute;
+	left: 9px;
+	top: 8px;
+	height: 16px;
+	width: 16px;
+	background: url('icons/user.png') center no-repeat;
+}
+#user::after {
+    content: '!';
+	line-height: 1.7;
+	text-align: center;
+	font-size: 0.6em;
+	border-radius: 50%;
+	height: 17px;
+	width: 15px;
+	background-color: #E03838;
+	left:24px;
+	top: 7px;
+}
+#flag {
+	background: url('icons/flag.png') center no-repeat;
+	background-color: #6a9fcc;
+}
+#checked {
+	background: url('icons/checked.png') center no-repeat;
+	background-color: #6a9fcc;
+}
+#refresh {
+	background: url('icons/refresh.png') center no-repeat;
+	background-color: #6a9fcc;
+}
+#widget {
+	background: url('icons/widget.png') center no-repeat;
+	background-color: #6a9fcc;
+}
+#exit {
+	padding: 0 0 0 22px;
+	line-height: 1.8;
+	background-color: #2f2f35;
+	position: relative;
+	width: 88px;
+}
+#exit::after {
+    content: '';
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	right: 10px;
+	top:7px;
+	background: url('icons/exit.png') center no-repeat;
+}
+#exit:hover {
+     background-color: #b4b4b4;
+}
+#mail:hover,
+#page:hover,
+#user:hover,
+#flag:hover,
+#checked:hover,
+#refresh:hover,
+#widget:hover {
+	color: #E03838;
+    background-color: #E03838;
+}
+#mail:hover::after,
+#page:hover::after,
+#user:hover::after {
+	background-color: #eee;
+}
