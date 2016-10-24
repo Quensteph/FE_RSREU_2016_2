@@ -1,0 +1,43 @@
+body {
+    background-color: #eee;
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #333;
+}
+h2 {
+    text-align: center;
+}
+.thumbnail {
+    width: 200px;
+    height: 150px;
+    border: 2px solid #333;
+    padding: 10px;
+    margin: 10px;
+}
+.gallery-float {
+    max-width: 800px;
+    min-height: 500px;
+}
+.gallery-float img {
+    float: left;
+}
+#cf {
+    clear: both;
+}
+.gallery-inline-block {
+    max-width: 800px;
+}
+.gallery-inline-block img {
+    display: inline-block;
+}
+.gallery-flex-box {
+    max-width: 800px;
+}
+.flex-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* flex-flow: row wrap */ /* Shothand for flex-direction + flex-wrap */
+    align-content: flex-start;
+}
