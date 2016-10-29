@@ -1,0 +1,46 @@
+/* Sticky */
+body {
+  height: 100%;
+}
+
+.page-wrapper {
+  min-height: 100%;
+  margin-bottom: -45px;
+}
+
+.page-wrapper::after {
+  content: '';
+  display: block;
+  height: 45px;
+}
+
+.footer__container {
+  height: 45px;
+  border-radius: 0 0 4px 4px;
+  background-color: #181e2c;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+}
+
+.footer__bottom-nav {
+  background-color: #1f2637;
+  border-radius: 0 0 4px 0;
+  height: inherit;
+  display: inline-flex;
+  align-items: center;
+}
+
+.bottom-nav__item {
+  padding: 16px 20px 11px 21px;
+  color: #fff;
+  transition: all 300ms ease-in-out;
+}
+
+.bottom-nav__item--corner {
+  border-radius: 0 0 4px 0;
+}
+
+.bottom-nav__item:hover {
+  background-color: #15a4fa;
+}
