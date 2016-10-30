@@ -1,6 +1,13 @@
 @font-face {
-    font-family: 'Proxima Nova';
-    src: url('../fonts/ProximaNovaLight.otf') format('opentype');
-    font-weight: 300;
-    font-style: normal;
+  font-family: 'Proxima Nova';
+  src: url('../fonts/ProximaNovaLight.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Proxima Nova';
+  src: url('../fonts/ProximaNovaSemibold.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
 }
