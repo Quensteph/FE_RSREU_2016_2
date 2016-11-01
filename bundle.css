@@ -4,4 +4,5 @@
 @import 'blocks/header/header.css';
 @import 'blocks/search-panel/search-panel.css';
 @import 'blocks/sidebar/sidebar.css';
+@import 'blocks/content/content.css';
 @import 'blocks/footer/footer.css';

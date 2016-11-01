@@ -1,5 +1,6 @@
 .sidebar__container {
     width: 200px;
+    height: 100%;
     background-color: #1f2637;
     display: flex;
     flex-flow: column nowrap;
@@ -144,6 +145,7 @@
 
 .sidebar__history {
   width: 100%;
+  min-height: 348px;
   color: #545d74;
 }
 

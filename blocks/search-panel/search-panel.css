@@ -1,10 +1,8 @@
 .search-panel__container {
-  width: calc(100% - 200px);
+  width: 100%;
   background-color: #eef1f7;
   font-family: 'Proxima Nova', Arial, sans-serif;
-  position: absolute;
-  top: 45px;
-  left: 200px;
+  flex-basis: 100%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: flex-start;
@@ -98,7 +96,7 @@
 .search-panel__search-icon {
   color: #8c97b2;
   position: absolute;
-  top: 88px;
+  top: 133px;
   right: 37px;
   font-size: 0.9em;
   cursor: pointer;
