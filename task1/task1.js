@@ -1,26 +1,26 @@
 "use strict";
 
 // Function accepts two integers and displays the largest
-function compareInt (int1, int2) {
+function compareInt(int1, int2) {
   if (typeof int1 === 'number' && typeof int2 === 'number') {
     if (int1 > int2) {
-      return int1
+      return int1;
     } else {
-      return int2
-    } 
+      return int2;
+    }
   } else {
-    throw new Error ('One or both inputs are not integer!') 
+    throw new Error('One or both inputs are not integer!')
   }
 }
 
 console.log(compareInt(1.3, 1.2));
 
 // Write a JS for loop that will iterate from 0 to 9. For each iteration, it will check if the current number is odd or even, and display a message to the console
-function oddEven () {
+function oddEven() {
   var parityArray = [];
 
   for (var i = 0; i < 10; i++) {
-    if (i % 2 == 0) {
+    if (isOdd(i)) {
       parityArray.push("even")
     } else {
       parityArray.push("odd")
@@ -28,6 +28,10 @@ function oddEven () {
   }
 
   return parityArray
+}
+
+function isOdd(num) {
+  return num % 2 == 0;
 }
 
 console.log(oddEven());
@@ -39,19 +43,19 @@ console.log(oddEven());
     * console.log(is_Blank('  abc  '));   == false
 */
 
-function isBlank (str) {
+function isBlank(str) {
   if (typeof str === 'string') {
     var charArray = [];
     for (var i = 0; i < str.length; i++) {
       if (str.charAt(i) !== ' ') {
-       charArray.push(str.charAt(i));
+        charArray.push(str.charAt(i));
       }
     }
 
     return charArray < 1;
   } else {
-    throw new Error ("Input is not a string!")
+    throw new Error("Input is not a string!")
   }
 }
 
-console.log(isBlank('                    '));
+console.log(isBlank(''));
