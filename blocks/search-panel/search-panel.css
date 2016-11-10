@@ -1,3 +1,7 @@
+body {
+  overflow-y:hidden;
+}
+
 .search-panel__container {
   width: 100%;
   background-color: #eef1f7;
@@ -79,6 +83,8 @@
 .search-panel__search-input {
   width: 400px;
   height: 30px;
+  outline: none;
+  text-indent: 10px;
   margin-right: 20px;
   border: 1px solid #c7cddb;
   border-radius: 15px;
