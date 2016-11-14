@@ -60,14 +60,30 @@ var calculator = (function () {
     return this;
   }
 
+  function getInitialState(callback) {
+
+
+    setTimeout(function () {
+      this.currentState = 5;
+      console.log(calculator.getResult.bind(calculator));
+      callback();
+    }, 500);
+  }
+
+  // getInitialState(function () {
+  //   calculator.add(1);
+  // })
+
   return {
-    // currentState: currentState,
+    currentState: currentState,
     add: add,
     subtract: subtract,
     multiply: multiply,
     divide: divide,
     getResult: getResult,
-    reset: reset
+    reset: reset,
+    getInitialState: getInitialState
   }
 
 } ());
+
