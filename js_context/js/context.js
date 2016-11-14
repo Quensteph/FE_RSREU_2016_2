@@ -1,58 +1,67 @@
-"use strict";
+var numberUtils = (function () {
+  "use strict";
 
-var isNumber = function isNumber(num) {
-  return isFinite(num) && !isNaN(parseFloat(num));
-}
+  function isNumber(num) {
+    return isFinite(num) && !isNaN(parseFloat(num));
+  }
 
-var Calculator = (function () {
+  return {
+    isNumber: isNumber
+  };
+
+} ());
+
+var calculator = (function () {
+  "use strict";
+
   var currentState = 0;
 
-  var checkInput = function (num) {
-    if (!isNumber(num)) {
+  function checkInput(num) {
+    if (!numberUtils.isNumber(num)) {
       throw new Error("Input is not a number!");
     }
   }
 
-  var add = function add(num) {
+  function add(num) {
     checkInput(num);
     this.currentState += num;
 
     return this;
   }
 
-  var subtract = function subtract(num) {
+  function subtract(num) {
     checkInput(num);
     this.currentState -= num;
 
     return this;
   }
 
-  var multiply = function multiply(num) {
+  function multiply(num) {
     checkInput(num);
     this.currentState *= num;
 
     return this;
   }
 
-  var divide = function divide(num) {
+  function divide(num) {
     checkInput(num);
     this.currentState = Math.floor(this.currentState / num);
 
     return this;
   }
 
-  var getResult = function () {
+  function getResult() {
     return this.currentState;
   }
 
-  var reset = function () {
+  function reset() {
     this.currentState = 0;
 
-    return this.currentState;
+    return this;
   }
 
   return {
-    currentState: currentState,
+    // currentState: currentState,
     add: add,
     subtract: subtract,
     multiply: multiply,
