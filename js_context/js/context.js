@@ -60,19 +60,16 @@ var calculator = (function () {
     return this;
   }
 
-  function getInitialState(callback) {
-
+  function getInitialState() {
 
     setTimeout(function () {
       this.currentState = 5;
-      console.log(calculator.getResult.bind(calculator));
-      callback();
-    }, 500);
+      console.log(calculator.getResult());
+    }.bind(this), 500);
+
+    return this.currentState;
   }
 
-  // getInitialState(function () {
-  //   calculator.add(1);
-  // })
 
   return {
     currentState: currentState,
