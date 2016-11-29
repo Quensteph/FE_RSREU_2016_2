@@ -1,0 +1,115 @@
+/*body {
+  overflow-y:hidden;
+}*/
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.search-panel__container {
+  width: 100%;
+  background-color: #eef1f7;
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  flex-basis: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-start;
+}
+
+.search-panel__section {
+  border-bottom: 1px solid #dadfea;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start
+}
+
+.search-panel__section--bottom{
+  height: 48px;
+  border-top: 1px solid #fff;
+}
+
+.search-panel__heading {
+  text-transform: capitalize;
+  flex-basis: 40%;
+  font-size: 1.4em;
+  font-weight: 300;
+  color: #444c63;
+  letter-spacing: 0.001em;
+  margin: 24px 0 20px 21px;
+}
+
+.search-panel__menu {
+  flex-basis: 50%;
+  display: inline-flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
+
+.search-panel__menu-item {
+  font-size: 0.75em;
+  font-weight: 300;
+  color: #8c97b2;
+  padding: 2px 10px;
+  border-radius: 9px;
+  transition: all 300ms ease-in-out;
+  cursor: pointer;
+  text-transform: capitalize;
+  align-self: center;
+}
+
+.search-panel__menu-item:first-of-type {
+  margin-left: 20px;
+}
+
+.search-panel__menu-item:not(:first-of-type) {
+  margin-left: 6px;
+}
+
+.search-panel__menu-input {
+  visibility: hidden;
+  position: absolute;
+}
+
+.search-panel__menu-input:checked + .search-panel__menu-item {
+  background-color: #97b3ce;
+  color: #fff;
+}
+
+.search-panel__search {
+  flex-basis: 50%;
+  display: inline-flex;
+  flex-flow: row nowrap;
+  justify-content: flex-end;
+}
+
+.search-panel__search-input {
+  width: 400px;
+  height: 30px;
+  outline: none;
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  font-weight: 300;
+  font-size: 0.8em;
+  text-indent: 10px;
+  margin-right: 20px;
+  border: 1px solid #c7cddb;
+  border-radius: 15px;
+  align-self: center;
+}
+
+.search-panel__search-input::-webkit-input-placeholder {
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  font-weight: 300;
+  color: #8c97b2;
+  padding-left: 15px;
+}
+
+.search-panel__search-icon {
+  color: #8c97b2;
+  position: absolute;
+  top: 133px;
+  right: 37px;
+  font-size: 0.9em;
+  cursor: pointer;
+}

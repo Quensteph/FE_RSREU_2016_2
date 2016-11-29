@@ -1,0 +1,83 @@
+.main-section__wrapper {
+  width: 100%;
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.middle-content__container {
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.content__container {
+  width: 100%;
+  height: 1000px;
+  flex: 1 1 auto;
+  overflow-y: auto;
+  background-color: #ffffff;
+  font-family: 'Proxima Nova', Arial, sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.01em;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+}
+
+.content__container::-webkit-scrollbar {
+  width: 7px;
+}
+
+.content__container::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #ccd5e4;
+}
+
+.content__book-entry {
+  height: 350px;
+  width: 200px;
+  margin: 28px 0 0 20px;
+}
+
+.content__book-name {
+  color: #444c63;
+  margin-top: 9px;
+}
+
+.content__book-author {
+  font-size: 0.7em;
+  letter-spacing: 0.03em;
+  color: #6f7d95;
+  margin-top: 6px;
+}
+
+/* Stars Snippet */
+.content__book-rating {
+  margin-top: 9px;
+  border: none;
+  float: left;
+}
+
+.content__book-rating > input { display: none; }
+
+.content__book-rating > label:before { 
+  margin: 0.9px;
+  font-size: 0.8em;
+  font-family: FontAwesome;
+  display: inline-block;
+  content: "\f005";
+}
+
+.content__book-rating > label { 
+  color: #ddd; 
+  float: right; 
+}
+
+.content__book-rating > input:checked ~ label, /* show gold star when clicked */
+.content__book-rating:not(:checked) > label:hover, /* hover current star */
+.content__book-rating:not(:checked) > label:hover ~ label { color: #FFD700;  } /* hover previous stars in list */
+
+.content__book-rating > input:checked + label:hover, /* hover current star when changing rating */
+.content__book-rating > input:checked ~ label:hover,
+.content__book-rating > label:hover ~ input:checked ~ label, /* lighten current selection */
+.content__book-rating > input:checked ~ label:hover ~ label { color: #FFED85;  }
