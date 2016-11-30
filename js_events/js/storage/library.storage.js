@@ -7,7 +7,7 @@ var library = (function (Book, Notification) {
   var LibraryDB = [
     new Book(1, 'Jewels of Nizam', 'Geeta Devi', COVERS_FOLDER_PATH + 'geeta-devi_jewels-of-nizam.png', 2),
     new Book(2, 'Cakes & Bakes', 'Sanjeev Capoor', COVERS_FOLDER_PATH + 'sanjeev-capoor_cakes-&-bakes.png', 1),
-    new Book(3, 'Jamie\'s Kitchen', 'Jamie Oliver', COVERS_FOLDER_PATH + 'jamie-oliver_jamies-kitchen.png', 5),
+    new Book(3, 'Jamie\'s Kitchen', 'Jamie Oliver', COVERS_FOLDER_PATH + 'jamie-oliver_jamies-kitchen.png', 0),
     new Book(4, 'Inexpensive Family Meals', 'Simon Holst', COVERS_FOLDER_PATH + 'simon-hoist_inexpensive-family-meals.png', 0),
     new Book(5, 'Paleo Slow Cooking', 'Chrissy Gower', COVERS_FOLDER_PATH + 'chrissy-gower_paleo-slow-cooking.png', 0),
     new Book(6, 'Cook Like an Italian', 'Tobie Puttock', COVERS_FOLDER_PATH + 'tobie-puttock_cook-like-an-italian.png', 0),

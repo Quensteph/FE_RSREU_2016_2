@@ -1,6 +1,15 @@
 var libraryView = (function (libraryController) {
     'use strict';
 
+    function initialize() {
+        displayNotifications();
+        displayLibrary();
+        window.document.querySelector('#allBooksLabel').addEventListener('click', displayLibrary);
+        window.document.querySelector('.search-panel__search-input').addEventListener('input', displaySearch);
+        window.document.querySelector('#mostPopularLabel').addEventListener('click', displayMostPopular);
+        window.document.querySelector('.sidebar__btnAdd').addEventListener('click', addBook);
+    }
+
     function clearLibrary() {
         window.document.querySelector('.content__container').innerHTML = '';
     }
@@ -42,7 +51,6 @@ var libraryView = (function (libraryController) {
     }
 
     function displayLibrary() {
-
         clearLibrary();
 
         for (var i = 0; i < libraryController.getLibrary().length; i++) {
@@ -80,34 +88,7 @@ var libraryView = (function (libraryController) {
                 elem = window.document.querySelector(selector);
 
                 if (elem) {
-                    elem.addEventListener('click', function updateRating() {
-                        var currentRating, libraryIdOfClickedBook;
-
-                        currentRating = Number(this.value);
-                        libraryIdOfClickedBook = parseInt(this.id.substring(4, 6)) - 1;
-
-                        library.LibraryDB[libraryIdOfClickedBook].rating = currentRating;
-
-                        var notification = new Notification(
-                            libraryController.getNotifications().length + 1,
-                            libraryController.getLibrary()[libraryIdOfClickedBook].title,
-                            libraryController.getLibrary()[libraryIdOfClickedBook].author,
-                            null,
-                            null,
-                            libraryController.getLibrary()[libraryIdOfClickedBook].rating,
-                            new Date(),
-                            'rating'
-                        );
-
-                        library.NotificationDB.push(notification);
-
-                        for (var k = 0; k < libraryController.getNotifications().length; k++) {
-                            if (libraryController.getNotifications()[k].tag === 'rating') {
-                                createRatingNotificationHTML(libraryController.getNotifications()[k]);
-                                library.NotificationDB.splice(-1, 1);
-                            }
-                        }
-                    });
+                    elem.addEventListener('click', updateRating);
                 }
             }
         }
@@ -158,19 +139,24 @@ var libraryView = (function (libraryController) {
     }
 
     function displayNotifications() {
-        clearNotifications();
+       clearNotifications();
 
         for (var i = 0; i < libraryController.getNotifications().length; i++) {
-            if (libraryController.getNotifications()[i].tag === 'add') {
-                createAddNotificationHTML(libraryController.getNotifications()[i]);
-            } else if (libraryController.getNotifications()[i].tag === 'filter') {
-                createFilterNotificationHTML(libraryController.getNotifications()[i]);
-            } else if (libraryController.getNotifications()[i].tag === 'search') {
-                createSearchNotificationHTML(libraryController.getNotifications()[i]);
-            } else if (libraryController.getNotifications()[i].tag === 'rating') {
-                createRatingNotificationHTML(libraryController.getNotifications()[i]);
-            } else {
-                console.log('default!');
+            switch (libraryController.getNotifications()[i].tag) {
+                case 'add':
+                    createAddNotificationHTML(libraryController.getNotifications()[i]);
+                    break;
+                case 'filter':
+                    createFilterNotificationHTML(libraryController.getNotifications()[i]);
+                    break;
+                case 'search':
+                    createSearchNotificationHTML(libraryController.getNotifications()[i]);
+                    break;
+                case 'rating':
+                    createRatingNotificationHTML(libraryController.getNotifications()[i]);
+                    break;
+                default:
+                    break;
             }
         }
     }
@@ -239,16 +225,15 @@ var libraryView = (function (libraryController) {
         window.document.querySelector('.sidebar__history').innerHTML += notificationHTML;
     }
 
+    function updateRating() {
+        var currentRating = Number(this.value);
+        var libraryIdOfClickedBook = parseInt(this.id.substring(4, 6)) - 1;
 
-
-    displayNotifications();
-    displayLibrary();
-    window.document.querySelector('#allBooksLabel').addEventListener('click', displayLibrary);
-    window.document.querySelector('.search-panel__search-input').addEventListener('input', displaySearch);
-    window.document.querySelector('#mostPopularLabel').addEventListener('click', displayMostPopular);
-    window.document.querySelector('.sidebar__btnAdd').addEventListener('click', addBook);
+        libraryController.updateRating(currentRating, libraryIdOfClickedBook);
+    }
 
     return {
+        initialize: initialize,
         clearLibrary: clearLibrary,
         createBookHTML: createBookHTML,
         displayLibrary: displayLibrary,

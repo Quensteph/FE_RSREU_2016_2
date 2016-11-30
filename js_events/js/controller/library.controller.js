@@ -58,7 +58,6 @@ var libraryController = (function (library) {
             library.NotificationDB.splice(-1, 1);
         }
 
-
         return result;
     }
 
@@ -82,36 +81,67 @@ var libraryController = (function (library) {
             'add'
         );
 
-        library.LibraryDB.push(book);
+        if (book.author && book.title) {
+            library.LibraryDB.push(book);
+        }
+
+        if (notification.author && notification.title) {
+            library.NotificationDB.push(notification);
+        }
+    }
+
+    function updateRating(currentRating, libraryIdOfClickedBook) {
+        library.LibraryDB[libraryIdOfClickedBook].rating = currentRating;
+
+        var notification = new Notification(
+            libraryController.getNotifications().length + 1,
+            libraryController.getLibrary()[libraryIdOfClickedBook].title,
+            libraryController.getLibrary()[libraryIdOfClickedBook].author,
+            null,
+            null,
+            libraryController.getLibrary()[libraryIdOfClickedBook].rating,
+            new Date(),
+            'rating'
+        );
+
         library.NotificationDB.push(notification);
+
+        for (var k = 0; k < libraryController.getNotifications().length; k++) {
+            if (libraryController.getNotifications()[k].tag === 'rating') {
+                libraryView.createRatingNotificationHTML(libraryController.getNotifications()[k]);
+                library.NotificationDB.splice(-1, 1);
+            }
+        }
     }
 
     function timeSince(date) {
         var seconds = Math.floor((new Date() - date) / 1000);
-        var interval = Math.floor(seconds / 31536000);
 
+        // Check years
+        var interval = Math.floor(seconds / 31536000);
         if (interval > 1) {
             return interval + ' years ago';
         }
 
+        // Check months
         interval = Math.floor(seconds / 2592000);
-
         if (interval > 1) {
             return interval + ' months ago';
         }
 
+        // Check days
         interval = Math.floor(seconds / 86400);
-
         if (interval > 1) {
             return interval + ' days ago';
         }
 
+        // Check hours
         interval = Math.floor(seconds / 3600);
-
         if (interval > 1) {
             return interval + ' hours ago';
         }
 
+        //Check minutes
         interval = Math.floor(seconds / 60);
         if (interval > 1) {
             return interval + ' minutes ago';
@@ -127,6 +157,7 @@ var libraryController = (function (library) {
         getMostPopular: getMostPopular,
         searchBook: searchBook,
         addBook: addBook,
-        timeSince: timeSince
+        timeSince: timeSince,
+        updateRating: updateRating
     }
 })(library);
